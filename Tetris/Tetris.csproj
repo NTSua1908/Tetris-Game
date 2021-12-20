@@ -1,0 +1,1024 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCFF60C5-0BB0-4C13-8D7D-C1F98E6B5DCD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tetris</RootNamespace>
+    <AssemblyName>Tetris</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tetris.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountProfile.Designer.cs">
+      <DependentUpon>AccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Difficulties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Difficulties.Designer.cs">
+      <DependentUpon>Difficulties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ForgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPass.Designer.cs">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="GameOnePlayer.cs" />
+    <Compile Include="GameOtherPlayer.cs" />
+    <Compile Include="GamePlayer.cs" />
+    <Compile Include="LeaderBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaderBoard.Designer.cs">
+      <DependentUpon>LeaderBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level.Designer.cs">
+      <DependentUpon>Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lose.Designer.cs">
+      <DependentUpon>Lose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mode.Designer.cs">
+      <DependentUpon>Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Name.Designer.cs">
+      <DependentUpon>Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Option.Designer.cs">
+      <DependentUpon>Option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsPC.cs" />
+    <Compile Include="ProfileGamer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileGamer.Designer.cs">
+      <DependentUpon>ProfileGamer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveForm.Designer.cs">
+      <DependentUpon>SaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketData.cs" />
+    <Compile Include="SocketManager.cs" />
+    <Compile Include="SourceGame.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TetrisAI.cs" />
+    <Compile Include="Tetris_Mulltiplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tetris_Mulltiplayer.Designer.cs">
+      <DependentUpon>Tetris_Mulltiplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tetris_OnePlayerGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tetris_OnePlayerGame.Designer.cs">
+      <DependentUpon>Tetris_OnePlayerGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tetris_PlayerVsPCGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tetris_PlayerVsPCGame.Designer.cs">
+      <DependentUpon>Tetris_PlayerVsPCGame.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Difficulties.resx">
+      <DependentUpon>Difficulties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPass.resx">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderBoard.resx">
+      <DependentUpon>LeaderBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lose.resx">
+      <DependentUpon>Lose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode.resx">
+      <DependentUpon>Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Name.resx">
+      <DependentUpon>Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Option.resx">
+      <DependentUpon>Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileGamer.resx">
+      <DependentUpon>ProfileGamer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SaveForm.resx">
+      <DependentUpon>SaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tetris_Mulltiplayer.resx">
+      <DependentUpon>Tetris_Mulltiplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tetris_OnePlayerGame.resx">
+      <DependentUpon>Tetris_OnePlayerGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tetris_PlayerVsPCGame.resx">
+      <DependentUpon>Tetris_PlayerVsPCGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1paf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1paf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2paf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2paf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\127234887_829127167885529_2086583191965389105_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\127234887_829127167885529_2086583191965389105_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ảnh đẹp 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ảnh đẹp 14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ảnh đẹp 15 b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgr1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Board.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borderPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borderPink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borderr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borderrr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture22.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture221.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daco_269794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com %2849%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com %2849%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-encapsulated-postscript-clip-art-play-again-5b3ac70e192552.797577901530578702103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-lead-scoring-management-computer-icons-payment-bal-5af8b54f201368.2404051515262487831314.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musicicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musicicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musicicon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musicnote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musicnote1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEXT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEXTTEXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\one1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAUSE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseText1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseText2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCAF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCAF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pos11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QUIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QUIT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QUITAF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rainbow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rainbow1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESTART.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESTART1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESTARTAF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESUME.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESUME1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESUMEaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_3download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_13download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_89-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_kisspng-computer-icons-encapsulated-postscript-clip-art-play-again-5b3ac70e192552797577901530578702103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_kisspng-lead-scoring-management-computer-icons-payment-bal-5af8b54f2013682404051515262487831314.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreBoardGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreBoardGame1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scorenew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUBMITaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUBMITnho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tetris_GiIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tetris_GiIF1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_album_bg_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_album_bg_0021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_database_frame_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_database_frame_0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_database_frame_0012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_database_frame_00111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youlose.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Your Name_Kimi no na wa %281080x1920%29 as Smart Object-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Your Name_Kimi no na wa %281080x1920%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Your Name_Kimi no na wa %281080x1920%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Your Name_Kimi no na wa %281080x1920%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %281%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %281%2941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %282%2921.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %283%2911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %284%2911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %285%2911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %286%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zilap-game-personal-use %286%2911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com %2848%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tettris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y3il.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leaderboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leaderboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnePlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoPlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PvE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marreline.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jake.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlamePrin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnePlayerAf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PVPaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PVP.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pvp2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pvp21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pvp22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragonball.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naruto.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Byegif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yesaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo-phim-your-name-e1576773284216-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Onepiece.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPTIONaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COUNTINUEnm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COUNTINUEdaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COUNTINUE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPTION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPTION1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPTION2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPTION3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayGame.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TGSgif-medium.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PourTheDay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\465caf769720bddcc87d135e629a90af.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Onepiece1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kiminonawa.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EASY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EASYaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NORMAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NORMALaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HARD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HARDaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charmender.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charmeleon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charizard.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_OnePlayer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_OnePlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CASUAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CASUALaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evolution.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Player.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AI.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo-phim-your-name-e1576773284216.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PourTheDay1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warzone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkin.com_frame-png_73320.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tesst.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mizuki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emiyaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gil %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_Multi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGround_AI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_AI1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pro_Gamer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMO avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGAI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGAI1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQAqua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQOrgane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQPurple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HQYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\countdown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sakura.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\random.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signup.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enamies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Samurai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameFrame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GamerName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\echo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tetris.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
